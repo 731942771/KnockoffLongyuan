@@ -1,0 +1,43 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+
+        <!-- 没有标题栏 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <!-- 自定义的Activity主题 -->
+    <style name="InfAty_InOut_Anim" parent="android:Theme.NoTitleBar">
+        <item name="android:windowAnimationStyle">@style/InOut_Anim</item>
+    </style>
+
+    <!-- 动作 -->
+    <style name="InOut_Anim" parent="@android:style/Animation.Activity">
+        <!-- 当A启动B时，A退出，B进入。
+             A退出时的动画名称为android:activityOpenExitAnimation，-->
+<!--         <item name="android:activityOpenExitAnimation">@anim/out_to_left</item> -->
+        <!-- B进入时的动画名称为android:activityOpenEnterAnimation -->
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>
+        
+        <!-- 当B结束时，B退出，A进入。
+             B退出的动画名称为android:activityCloseExitAnimation>。-->
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_right</item>
+        <!-- A进入时的动画名称为android:activityCloseEnterAnimation -->
+<!--         <item name="android:activityCloseEnterAnimation">@anim/in_from_left</item> -->
+    </style>
+
+</resources>

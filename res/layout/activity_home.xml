@@ -1,0 +1,103 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- bottom层 -->
+    <LinearLayout
+        android:id="@+id/ll_bottom_hmaty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#999999"
+        android:orientation="vertical" >
+
+        <!-- 使用height=0，weight=1时点击lv的item会引起top层变形 -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#333333"
+            android:src="@drawable/splash_logo" />
+
+        <ListView
+            android:id="@+id/lv_subject_hmaty"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="9" >
+        </ListView>
+    </LinearLayout>
+
+    <!-- top层 -->
+    <com.cuiweiyou.knockofflongyuan.view.ViewTopScrollerLinearLyt
+        android:id="@+id/ll_top_hmaty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <!-- Fragment容器 -->
+        <LinearLayout
+            android:id="@+id/ll_fragment_container_hmaty"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="9.1"
+            android:orientation="horizontal" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#777777"
+            android:orientation="horizontal" >
+
+            <!-- extends LinearLayout ，需指定orientation -->
+
+            <RadioGroup
+                android:id="@+id/rg_bar_hmaty"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" >
+
+                <!-- button="@null"，不再显示默认的圆圈。checked="true"，默认选中。tag标识。background是个选择器设定state_checked -->
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_btn_hmfmg_hmaty"
+                    android:button="@null"
+                    android:tag="0" />
+
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_btn_schfmg_hmaty"
+                    android:button="@null"
+                    android:tag="1" />
+
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_btn_jrlfmg_hmaty"
+                    android:button="@null"
+                    android:tag="2" />
+
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_btn_colfmg_hmaty"
+                    android:button="@null"
+                    android:tag="3" />
+
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_btn_stgfmg_hmaty"
+                    android:button="@null"
+                    android:tag="4" />
+            </RadioGroup>
+        </LinearLayout>
+    </com.cuiweiyou.knockofflongyuan.view.ViewTopScrollerLinearLyt>
+
+</RelativeLayout>

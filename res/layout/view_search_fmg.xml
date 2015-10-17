@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#555555"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="5dp" >
+
+            <EditText
+                android:id="@+id/et_searchkey_srhfmg"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="8"
+                android:background="#343434"
+                android:drawableLeft="@drawable/zoom"
+                android:gravity="center_vertical"
+                android:hint="在仿龙源网杂志库内搜索文章"
+                android:padding="5dp"
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_searchbtn_srhfmg"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="取消"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="9"
+            android:orientation="horizontal" >
+
+            <GridView
+                android:id="@+id/gv_hotwords_srhfmg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:horizontalSpacing="10dp"
+                android:numColumns="3"
+                android:verticalSpacing="10dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 数据加载过程缓慢，展示此圆环。家在结束后gone掉 -->
+
+    <ProgressBar
+        android:id="@+id/pb_isLoading_srhaty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp" />
+
+    <ImageView
+        android:id="@+id/iv_warning_srhaty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_warning"
+        android:visibility="gone" />
+    
+    <!-- 注释注释注释注释注释注释注释 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+	    android:layout_alignParentBottom="true"
+        android:padding="1dp"
+        android:orientation="vertical" >
+	    <TextView 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:background="#ffffff"
+			android:textSize="10sp"
+	        android:gravity="center"
+	        android:text="搜索面板（实体为Fragment）。主显示区为GridView。未实现：已有热词搜索、自定义搜索"/>
+    </LinearLayout>
+    
+</RelativeLayout>

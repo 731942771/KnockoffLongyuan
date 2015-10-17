@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#999999"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_title_colfmg"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#333333"
+            android:gravity="center"
+            android:text="收藏"
+            android:textColor="#ffffff"
+            android:textSize="20dp" />
+
+        <ListView
+            android:id="@+id/lv_col_colfmg"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="9" />
+    </LinearLayout>
+
+    <!-- 数据加载过程缓慢，展示此圆环。结束后gone掉 -->
+    <ProgressBar
+        android:id="@+id/pb_isLoading_colfmg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp" />
+
+    <ImageView
+        android:id="@+id/iv_warning_colfmg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_warning"
+        android:visibility="gone" />
+    
+    <!-- 注释注释注释注释注释注释注释 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+	    android:layout_alignParentBottom="true"
+        android:padding="1dp"
+        android:orientation="vertical" >
+	    <TextView 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:background="#ffffff"
+			android:textSize="10sp"
+	        android:gravity="center"
+	        android:text="收藏面板（实体为Fragment）。主显示区为ListView。收藏条目的添加删除在资讯祥页控制，通过广播同步。使用Sqlite存储。选择已有收藏可进入祥页。未实现：美化"/>
+    </LinearLayout>
+</RelativeLayout>

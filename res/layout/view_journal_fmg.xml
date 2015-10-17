@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00f00f" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#333333"
+            android:gravity="center"
+            android:text="杂志流"
+            android:textSize="20dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#777777"
+            android:orientation="horizontal" >
+
+            <RadioGroup
+                android:id="@+id/rgroup_jrlfmg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/rbtn_shop_jrlfmg"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_rdobtn_jrlfmg"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="商店" />
+
+                <RadioButton
+                    android:id="@+id/rbtn_buied_jrlfmg"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_rdobtn_jrlfmg"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="已购" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.2"
+            android:background="#777777"
+            android:orientation="horizontal" >
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lv_journals_jrlfmg"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7.8"
+            android:background="#cccccc" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_isLoading_jrlfmg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp" />
+
+    <ImageView
+        android:id="@+id/iv_warning_jrlfmg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_warning"
+        android:visibility="gone" />
+    
+    <!-- 注释注释注释注释注释注释注释 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+	    android:layout_alignParentBottom="true"
+        android:padding="1dp"
+        android:orientation="vertical" >
+	    <TextView 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:background="#ffffff"
+			android:textSize="10sp"
+	        android:gravity="center"
+	        android:text="杂志面板（实体为Fragment）。主显示区为ListView。未实现：登录/已购切换、登录后已购、商店中选择杂志进入"/>
+    </LinearLayout>
+</RelativeLayout>
